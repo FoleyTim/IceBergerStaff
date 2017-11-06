@@ -1,0 +1,165 @@
+/** { border: 1px solid black; }*/
+
+body {
+  font: 15px/1.5 Ariel, Helvetica, sans-serif;
+  background: #9A4198;/* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#9A4198, #D67DB3); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#9A4198, #D67DB3); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#9A4198, #D67DB3); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#9A4198, #D67DB3); /* Standard syntax */
+  background-repeat: no-repeat;
+  height: 100%;
+  margin: 0;
+  background-attachment: fixed;
+}
+
+.container {
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+header ul {
+	margin: 0 auto;
+	padding: 0;
+}
+
+
+/*Header*/
+header#logged {
+	background: #65BBC6;/* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #65BBC6, #147871); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #65BBC6, #147871); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #65BBC6, #147871); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #65BBC6, #147871); /* Standard syntax */
+	color: #ffffff;
+	padding-top: 10px;
+  padding-bottom: 5px;
+	min-height: 70px;
+	border-bottom: #FFD66C 7px solid;
+}
+
+header#logged a {
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+header#logged li {
+	float: left;
+	display: inline;
+	padding: 0 20px 0 20px;
+  line-height:50px;
+}
+
+
+header#logged #branding {
+	float: left;
+}
+
+header#logged #branding h1 {
+	margin: 0;
+}
+
+header#logged nav {
+	float: right;
+	margin-top: 10px;
+}
+
+header#logged .highlight, header .current a {
+	color: 	#e8491d;
+	font-weight: bold;
+}
+
+header#logged a:hover {
+	border-bottom: #FFD66C 2px solid;
+}
+
+
+/*Menu**/
+header#menu {
+	background: #6A2D00;
+}
+
+header#menu a {
+	color: #FFD66C;
+	text-decoration: none;
+	font-size: 30px;
+  font-family: 'Galada', cursive;
+}
+
+header#menu li {
+	float: left;
+	display: inline;
+	padding: 16px 20px 5px 20px;
+}
+
+header#menu #branding {
+	float: left;
+}
+
+header#menu #branding h1 {
+	margin: 0;
+}
+
+header#menu nav {
+  align-items: center;
+}
+
+header#menu .highlight, header .current a {
+	color: 	#e8491d;
+	font-weight: bold;
+}
+
+header#menu a:hover {
+  border-bottom: #FFD66C 3px solid;
+}
+
+
+
+/*Main Area**/
+section.main-content {
+
+  max-height: inherit;
+}
+/*Stock Table**/
+#stock{
+}
+table {
+    white-space: nowrap;
+    display: block;
+    font: 15px/1.5 Ariel, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    margin: auto;
+    width: 20%;
+    border-collapse: collapse;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+td, th {
+    border: 1px solid #FFD66C;
+    text-align: left;
+    padding: 10px 30px 10px 30px;
+}
+
+tr:nth-child(odd) {
+
+    background-color:#9A4198;
+}
+
+th{
+  background-color: #65BBC6;
+}
+#updateButton{
+  display: block;
+  margin: auto;
+}
+input {
+color: #ffffff;
+text-align: right;
+background: transparent;
+border: none;
+}
