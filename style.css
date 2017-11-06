@@ -24,6 +24,10 @@ header ul {
 	padding: 0;
 }
 
+button:focus {
+  outline: none;
+}
+
 
 /*Header*/
 header#logged {
@@ -81,39 +85,52 @@ header#menu {
 	background: #6A2D00;
 }
 
-header#menu a {
-	color: #FFD66C;
-	text-decoration: none;
-	font-size: 30px;
-  font-family: 'Galada', cursive;
+.whitechoc {
+  position: relative;
+  top: -2px;
+  left: -2px;
 }
 
-header#menu li {
-	float: left;
-	display: inline;
-	padding: 16px 20px 5px 20px;
+/* Style the tab */
+div.tab {
+  margin-top: 7px;
+    overflow: hidden;
 }
 
-header#menu #branding {
-	float: left;
+/* Style the buttons inside the tab */
+div.tab button {
+    float: left;
+    transition: 0.3s;
+    width: 33%;
+    color: #FFD66C;
+    border: none;
+  	text-decoration: none;
+  	font-size: 30px;
+    font-family: 'Galada', cursive;
+    background: #6A2D00;
 }
 
-header#menu #branding h1 {
-	margin: 0;
+div.tab button{
+  height: 51.5px;
 }
 
-header#menu nav {
-  align-items: center;
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    border-bottom: #FFD66C 3px solid;
+    height: 51.5px;
 }
 
-header#menu .highlight, header .current a {
-	color: 	#e8491d;
-	font-weight: bold;
+/* Create an active/current tablink class */
+div.tab button.active {
+    border-bottom: #FFD66C 3px solid;
+}
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
 }
 
-header#menu a:hover {
-  border-bottom: #FFD66C 3px solid;
-}
 
 
 
@@ -122,9 +139,16 @@ section.main-content {
 
   max-height: inherit;
 }
-/*Stock Table**/
-#stock{
+
+
+#stockTable{
+    width: 30%;
 }
+#CustomerTable{
+    width: 45%;
+}
+
+/*Tables**/
 table {
     white-space: nowrap;
     display: block;
@@ -132,10 +156,8 @@ table {
     font-size: 16px;
     color: #ffffff;
     margin: auto;
-    width: 30%;
     border-collapse: collapse;
     padding-top: 20px;
-
 }
 
 td, th {
@@ -143,7 +165,7 @@ td, th {
     text-align: left;
     padding: 10px 30px 10px 30px;
 }
-#TableHead {
+.TableHead {
     background-color:#147871;
 }
 

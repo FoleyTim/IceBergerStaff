@@ -1,93 +1,152 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>IceBerger | Staff</title>
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="script.js"></script>
+<head>
+  <meta charset="utf-8">
+  <title>IceBerger | Staff</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="script.js"></script>
 
-    <link href="https://fonts.googleapis.com/css?family=Galada" rel="stylesheet">
-  </head>
-  <body>
-    <header id="logged">
-		<div class="container">
-			<div id="branding">
+  <link href="https://fonts.googleapis.com/css?family=Galada" rel="stylesheet">
+</head>
+<body>
+  <header id="logged">
+    <div class="container">
+      <div id="branding">
         <img class="logo" src="images/IcebergerLogo.png" alt="" height="73" width"73">
-			</div>
-			<nav>
-				<ul>
-					<li><a href="">Log out</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="">Log out</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <section>
+  <section class="main">
     <header id="menu">
       <div class="container">
-        <nav>
-          <ul>
-            <li><a href="">Stock</a></li>
-            <li><a href="">Customers</a></li>
-            <li><a href="">Submitted Burgers</a></li>
-          </ul>
-        </nav>
+        <div class="tab">
+          <button id="default" class="tablinks" onclick="openMenu(event, 'StockList')">Stock</button>
+          <button class="tablinks" onclick="openMenu(event, 'Customers')">Customers</button>
+          <button class="tablinks" onclick="openMenu(event, 'BurgerGram')">BurgerGram</button>
+        </div>
       </div>
     </header>
   </section>
-  <div id ="Stock">
-    <table id ="stockTable">
-      <tr id ="TableHead">
-        <td>ITEM</td>
-        <td># OF ITEMS</td>
-      </tr>
-      <tr>
-        <th>Ice Cream</th>
-        <th></th>
-      </tr>
-      <tr>
-        <td>Vanilla</td>
-        <td><input type="text" name="VanIce" value="5"></td>
-      </tr>
-      <tr>
-        <td>Chocolate</td>
-        <td><input type="text" name="ChocIce" value="10"></td>
-      </tr>
-      <tr>
-        <td>Strawberry</td>
-        <td><input type="text" name="StrawIce" value="13"></td>
-      </tr>
-      <tr>
-        <td>Cookies and Cream</td>
-        <td><input type="text" name="CookIce" value="3"></td>
-      </tr>
-      <tr>
-        <th>Sauces</th>
-        <th></th>
-      </tr>
-      <tr>
-        <td>Chocolate</td>
-        <td><input type="text" name="ChocSauce" value="5"></td>
-      </tr>
-      <tr>
-        <td>Raspberry</td>
-        <td><input type="text" name="RasSauce" value="8"></td>
-      </tr>
-      <tr>
-        <td>Caramel</td>
-        <td><input type="text" name="CarSauce" value="11"></td>
-      </tr>
-    </table>
+  <div class="">
+    <img class="whitechoc" src="images/whitechoc.png" alt="" width="101%">
   </div>
-  <div id="updateButtonDiv">
-      <button id="updateButton"> Update</button>
-  </div>
+  <section>
+    <!--STOCK TAB-->
+    <div id="StockList" class="tabcontent">
+
+      <table id ="stockTable">
+        <tr class ="TableHead">
+          <td>ITEM</td>
+          <td># OF ITEMS</td>
+        </tr>
+        <tr>
+          <th>Ice Cream</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td>Vanilla</td>
+          <td><input type="text" name="VanIce" value="5"></td>
+        </tr>
+        <tr>
+          <td>Chocolate</td>
+          <td><input type="text" name="ChocIce" value="10"></td>
+        </tr>
+        <tr>
+          <td>Strawberry</td>
+          <td><input type="text" name="StrawIce" value="13"></td>
+        </tr>
+        <tr>
+          <td>Cookies and Cream</td>
+          <td><input type="text" name="CookIce" value="3"></td>
+        </tr>
+        <tr>
+          <th>Sauces</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td>Chocolate</td>
+          <td><input type="text" name="ChocSauce" value="5"></td>
+        </tr>
+        <tr>
+          <td>Raspberry</td>
+          <td><input type="text" name="RasSauce" value="8"></td>
+        </tr>
+        <tr>
+          <td>Caramel</td>
+          <td><input type="text" name="CarSauce" value="11"></td>
+        </tr>
+      </table>
+      <div id="updateButtonDiv">
+        <button id="updateButton"> Update</button>
+
+      </div>
+    </div>
+
+    <!--CUSTOMER TAB-->
+    <div id="Customers" class="tabcontent">
+      <table id ="CustomerTable">
+        <tr class="TableHead">
+          <td>CUSTOMER NAME</td>
+          <td>E-MAIL</td>
+          <td>PHONE</td>
+        </tr>
+        <tr>
+          <td>Steve Stephenson</td>
+          <td>Stevieboi@gmail.com</td>
+          <td> 0234954877</td>
+        </tr>
+        <tr>
+          <td>John mcDonald</td>
+          <td>JmcD@gmail.com</td>
+          <td> 0274958877</td>
+        </tr>
+        <tr>
+          <td>Sally Morrison</td>
+          <td>SpiceySal@gmail.com</td>
+          <td> 0213349933</td>
+        </tr>
+        <tr>
+          <td>John mcDonald</td>
+          <td>JmcD@gmail.com</td>
+          <td> 0274958877</td>
+        </tr>
+        <tr>
+          <td>Sally Morrison</td>
+          <td>SpiceySal@gmail.com</td>
+          <td> 0213349933</td>
+        </tr>
+        <tr>
+          <td>Steve Stephenson</td>
+          <td>Stevieboi@gmail.com</td>
+          <td> 0234954877</td>
+        </tr>
+        <tr>
+          <td>John mcDonald</td>
+          <td>JmcD@gmail.com</td>
+          <td> 0274958877</td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="Burgergram" class="tabcontent">
+      <h3>Populate Drinks</h3>
+    </div>
+
+
+
+
+  </section>
 
 
 
 
 
 
-
-  </body>
+</body>
 </html>
