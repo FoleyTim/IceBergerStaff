@@ -12,3 +12,26 @@ function openMenu(evt, item) {
     evt.currentTarget.className += " active";
 }
 document.getElementsById("default").trigger('click');
+
+/*remove row on click*/
+function approveGram(o) {
+  var p=o.parentNode.parentNode;
+   p.parentNode.removeChild(p);
+   showMsgOnEmptyTable('#BurgerTable');
+}
+function declineGram(o) {
+  var p=o.parentNode.parentNode;
+   p.parentNode.removeChild(p);
+   showMsgOnEmptyTable('#BurgerTable');
+}
+
+function showMsgOnEmptyTable(table){
+  console.log("showmsgempty");
+  console.log($(table + ' tbody').children().length);
+  if ($(table + ' tbody').children().length == 0) {
+    console.log("empty");
+    $(table).hide();
+    $("#msgDiv").text("There are currently no submitted burgers to review");
+}
+
+}

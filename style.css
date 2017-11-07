@@ -147,6 +147,10 @@ section.main-content {
 #CustomerTable{
     width: 45%;
 }
+#msgDiv{
+  color: #ffffff;
+   text-align: center;
+}
 
 /*Tables**/
 table {
@@ -190,4 +194,8 @@ border: none;
 #updateButtonDiv{
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.AppDec{
+  padding: 10px;
 }

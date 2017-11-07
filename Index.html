@@ -5,7 +5,7 @@
   <title>IceBerger | Staff</title>
   <link rel="stylesheet" href="style.css">
   <script type="text/javascript" src="script.js"></script>
-
+  <script  src="https://code.jquery.com/jquery-3.2.1.min.js"  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="  crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Galada" rel="stylesheet">
 </head>
 <body>
@@ -134,8 +134,31 @@
       </table>
     </div>
 
-    <div id="Burgergram" class="tabcontent">
-      <h3>Populate Drinks</h3>
+    <div id="BurgerGram" class="tabcontent">
+      <div id="msgDiv">
+      </div>
+      <table id ="BurgerTable">
+        <thead>
+          <tr class="TableHead">
+            <th>PHOTO</th>
+            <th>BURGER NAME</th>
+            <th>APPROVE OR DECLINE</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><img src="images/example.jpg" width=50%></td>
+            <td>Dankey Kong</td>
+            <td><button class="AppDec" onclick="approveGram(this)">Approve</button><button class="AppDec" onclick="declineGram(this)">Decline</button></td>
+          </tr>
+          <tr>
+            <td><img src="images/example2.jpg" width=50%></td>
+            <td>The Flippin' Stankmeister General</td>
+            <td><button class="AppDec" onclick="approveGram(this)">Approve</button><button class="AppDec" onclick="declineGram(this)">Decline</button></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
 
