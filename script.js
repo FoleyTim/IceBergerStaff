@@ -25,13 +25,10 @@ function declineGram(o) {
    showMsgOnEmptyTable('#BurgerTable');
 }
 
-function showMsgOnEmptyTable(table){
-  console.log("showmsgempty");
-  console.log($(table + ' tbody').children().length);
+function showMsgOnEmptyTable(table){ /*shows a message saying there are no submitted burgers if table body is empty**/
   if ($(table + ' tbody').children().length == 0) {
-    console.log("empty");
     $(table).hide();
     $("#msgDiv").text("There are currently no submitted burgers to review");
-}
+  }
 
 }
