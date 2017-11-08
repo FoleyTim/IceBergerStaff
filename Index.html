@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <title>IceBerger | Staff</title>
   <link rel="stylesheet" href="style.css">
-  <script type="text/javascript" src="script.js"></script>
   <script  src="https://code.jquery.com/jquery-3.2.1.min.js"  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Galada" rel="stylesheet">
 </head>
 <body>
@@ -16,7 +17,7 @@
       </div>
       <nav>
         <ul>
-          <li><a href="C:\Users\foleytim\Documents\GitHub\IceBergerStaff\LogIn.html">Log out</a></li>
+          <li><a id="logout">Log out</a></li>
         </ul>
       </nav>
     </div>
@@ -41,46 +42,50 @@
     <div id="StockList" class="tabcontent">
 
       <table id ="stockTable">
-        <tr class ="TableHead">
-          <td>ITEM</td>
-          <td># OF ITEMS</td>
-        </tr>
-        <tr>
-          <th>Ice Cream</th>
-          <th></th>
-        </tr>
-        <tr>
-          <td>Vanilla</td>
-          <td><input type="text" name="VanIce" value="5"></td>
-        </tr>
-        <tr>
-          <td>Chocolate</td>
-          <td><input type="text" name="ChocIce" value="10"></td>
-        </tr>
-        <tr>
-          <td>Strawberry</td>
-          <td><input type="text" name="StrawIce" value="13"></td>
-        </tr>
-        <tr>
-          <td>Cookies and Cream</td>
-          <td><input type="text" name="CookIce" value="3"></td>
-        </tr>
-        <tr>
-          <th>Sauces</th>
-          <th></th>
-        </tr>
-        <tr>
-          <td>Chocolate</td>
-          <td><input type="text" name="ChocSauce" value="5"></td>
-        </tr>
-        <tr>
-          <td>Raspberry</td>
-          <td><input type="text" name="RasSauce" value="8"></td>
-        </tr>
-        <tr>
-          <td>Caramel</td>
-          <td><input type="text" name="CarSauce" value="11"></td>
-        </tr>
+        <thead>
+          <tr class ="TableHead">
+            <td>ITEM</td>
+            <td># OF ITEMS</td>
+          </tr>
+        </thead>
+        <tbody id="inventory">
+          <tr>
+            <th>Ice Cream</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>Vanilla</td>
+            <td><input type="text" name="VanIce" value="5"></td>
+          </tr>
+          <tr>
+            <td>Chocolate</td>
+            <td><input type="text" name="ChocIce" value="10"></td>
+          </tr>
+          <tr>
+            <td>Strawberry</td>
+            <td><input type="text" name="StrawIce" value="13"></td>
+          </tr>
+          <tr>
+            <td>Cookies and Cream</td>
+            <td><input type="text" name="CookIce" value="3"></td>
+          </tr>
+          <tr>
+            <th>Sauces</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>Chocolate</td>
+            <td><input type="text" name="ChocSauce" value="5"></td>
+          </tr>
+          <tr>
+            <td>Raspberry</td>
+            <td><input type="text" name="RasSauce" value="8"></td>
+          </tr>
+          <tr>
+            <td>Caramel</td>
+            <td><input type="text" name="CarSauce" value="11"></td>
+          </tr>
+        </tbody>
       </table>
       <div id="updateButtonDiv">
         <button id="updateButton"> Update</button>
