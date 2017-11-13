@@ -29,7 +29,7 @@
         <div class="tab">
           <button id="default" class="tablinks" onclick="openMenu(event, 'StockList')">Stock</button>
           <button class="tablinks" onclick="openMenu(event, 'Customers')">Customers</button>
-          <button class="tablinks" onclick="openMenu(event, 'BurgerGram')">BurgerGram</button>
+          <button class="tablinks" onclick="openMenu(event, 'Accounts')">Account Management</button>
         </div>
       </div>
     </header>
@@ -96,79 +96,96 @@
     <!--CUSTOMER TAB-->
     <div id="Customers" class="tabcontent">
       <table id ="CustomerTable">
+        <thead>
         <tr class="TableHead">
           <td>CUSTOMER NAME</td>
           <td>E-MAIL</td>
-          <td>PHONE</td>
+          <td>Type</td>
         </tr>
-        <tr>
-          <td>Steve Stephenson</td>
-          <td>Stevieboi@gmail.com</td>
-          <td> 0234954877</td>
-        </tr>
-        <tr>
-          <td>John mcDonald</td>
-          <td>JmcD@gmail.com</td>
-          <td> 0274958877</td>
-        </tr>
-        <tr>
-          <td>Sally Morrison</td>
-          <td>SpiceySal@gmail.com</td>
-          <td> 0213349933</td>
-        </tr>
-        <tr>
-          <td>John mcDonald</td>
-          <td>JmcD@gmail.com</td>
-          <td> 0274958877</td>
-        </tr>
-        <tr>
-          <td>Sally Morrison</td>
-          <td>SpiceySal@gmail.com</td>
-          <td> 0213349933</td>
-        </tr>
-        <tr>
-          <td>Steve Stephenson</td>
-          <td>Stevieboi@gmail.com</td>
-          <td> 0234954877</td>
-        </tr>
-        <tr>
-          <td>John mcDonald</td>
-          <td>JmcD@gmail.com</td>
-          <td> 0274958877</td>
-        </tr>
-      </table>
-    </div>
-
-    <div id="BurgerGram" class="tabcontent">
-      <div id="msgDiv">
-      </div>
-      <table id ="BurgerTable">
-        <thead>
-          <tr class="TableHead">
-            <th>PHOTO</th>
-            <th>BURGER NAME</th>
-            <th>APPROVE OR DECLINE</th>
-          </tr>
         </thead>
-
-        <tbody>
+        <tbody id="customerList">
           <tr>
-            <td><img src="images/example.jpg" width=50%></td>
-            <td>Dankey Kong</td>
-            <td><button class="AppDec" onclick="approveGram(this)">Approve</button><button class="AppDec" onclick="declineGram(this)">Decline</button></td>
+            <td>Steve Stephenson</td>
+            <td>Stevieboi@gmail.com</td>
+            <td> 0234954877</td>
           </tr>
           <tr>
-            <td><img src="images/example2.jpg" width=50%></td>
-            <td>The Flippin' Stankmeister General</td>
-            <td><button class="AppDec" onclick="approveGram(this)">Approve</button><button class="AppDec" onclick="declineGram(this)">Decline</button></td>
+            <td>John mcDonald</td>
+            <td>JmcD@gmail.com</td>
+            <td> 0274958877</td>
+          </tr>
+          <tr>
+            <td>Sally Morrison</td>
+            <td>SpiceySal@gmail.com</td>
+            <td> 0213349933</td>
+          </tr>
+          <tr>
+            <td>John mcDonald</td>
+            <td>JmcD@gmail.com</td>
+            <td> 0274958877</td>
+          </tr>
+          <tr>
+            <td>Sally Morrison</td>
+            <td>SpiceySal@gmail.com</td>
+            <td> 0213349933</td>
+          </tr>
+          <tr>
+            <td>Steve Stephenson</td>
+            <td>Stevieboi@gmail.com</td>
+            <td> 0234954877</td>
+          </tr>
+          <tr>
+            <td>John mcDonald</td>
+            <td>JmcD@gmail.com</td>
+            <td> 0274958877</td>
           </tr>
         </tbody>
       </table>
     </div>
 
-
-
-
+    <!--STAFF ACCOUNTS-->
+    <div id="Accounts" class="tabcontent">
+<!--STAFF TABLE-->
+      <table id ="StaffTable">
+        <thead>
+        <tr class="TableHead">
+          <td>USERNAME</td>
+          <td>REMOVE</td>
+        </tr>
+        </thead>
+        <tbody id="customerList">
+          <tr>
+            <td>JmcD@gmail.com</td>
+            <td><button>Remove</button></td>
+          </tr>
+          <tr>
+            <td>JmcD@gmail.com</td>
+            <td><button>Remove</button></td>
+          </tr>
+          <tr>
+            <td>JmcD@gmail.com</td>
+            <td><button>Remove</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <!--CREATE NEW STAFF-->
+      <form  id="createUser" method="post">
+        <div id ="createBlurb">
+          Create a new staff account
+        </div>
+        <div class="createForm" >
+          <label class="createUserLabel"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" class="notTrans" id="NewUname" required>
+        </div>
+        <div class="createForm">
+          <label class="createUserLabel"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" class="notTrans" id="NewlogPsw" required>
+        </div>
+        <div>
+            <button  type="submit" id=createStaffButton >CreateUser</button>
+        </div>
+      </form>
+    </div>
   </section>
 
 

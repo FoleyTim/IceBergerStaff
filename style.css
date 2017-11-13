@@ -149,10 +149,8 @@ section.main-content {
 #CustomerTable{
     width: 45%;
 }
-#msgDiv{
-  color: #ffffff;
-   text-align: center;
-}
+
+
 
 /*Tables**/
 table {
@@ -163,7 +161,6 @@ table {
     color: #ffffff;
     margin: auto;
     border-collapse: collapse;
-    padding-top: 20px;
 }
 
 td, th {
@@ -202,6 +199,43 @@ border: none;
   padding: 10px;
 }
 
+#StaffTable{
+  float:right;
+  margin-right: 270px;
+}
+
+#createUser{
+  float:left;
+  border: solid #FFD66C;
+  width: 200px;
+  border-width:medium;
+  margin-left: 270px;
+  padding: 25px;
+  /*align:left;*/
+}
+#createBlurb{
+  display: block;
+  color:white;
+  text-align:center
+  margin:none;
+}
+.createUserLabel{
+  margin: auto;
+  color:white;
+  text-align:center;
+  display: block;
+}
+#createStaffButton{
+
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}
+.createForm{
+  display: block;
+
+}
+
 /*Login page stuff**/
 .title {
   color: #ffffff;
@@ -222,7 +256,9 @@ border: none;
 }
 
 input.notTrans{
-  text-align: left;
+  display:block;
+  margin:auto;
+  text-align: center;
   color: #000000;
   background: #ffffff;
   border: 2px;

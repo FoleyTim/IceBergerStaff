@@ -11,27 +11,8 @@ function openMenu(evt, item) {
     document.getElementById(item).style.display = "block";
     evt.currentTarget.className += " active";
 }
-// document.getElementsById("default").trigger('click');
 
-/*remove row on click*/
-function approveGram(o) {
-  var p=o.parentNode.parentNode;
-   p.parentNode.removeChild(p);
-   showMsgOnEmptyTable('#BurgerTable');
-}
-function declineGram(o) {
-  var p=o.parentNode.parentNode;
-   p.parentNode.removeChild(p);
-   showMsgOnEmptyTable('#BurgerTable');
-}
 
-function showMsgOnEmptyTable(table){ /*shows a message saying there are no submitted burgers if table body is empty**/
-  if ($(table + ' tbody').children().length == 0) {
-    $(table).hide();
-    $("#msgDiv").text("There are currently no submitted burgers to review");
-  }
-
-}
 
 $('document').ready(function() {
   $("#loginform").submit(function(event) {
@@ -41,7 +22,7 @@ $('document').ready(function() {
     var password = document.getElementById("logPsw").value;
     $.getJSON("http://10.140.124.121/iceberger_backend/api.php?callback=?", "method=login&email=" + name + "&password=" + password, function(data) {
       if (data['success'] && data['privilege'] > 0) {
-        $.cookie("user", $data['user']);
+        $.cookie("user", data['user']);
         window.location.href = "index.html";
       }
     });
@@ -71,6 +52,16 @@ $('document').ready(function() {
       // $('#inventory').append("<tr><td>"+item['name']+"</td><td><input class=\"inventoryitem\" type=\"text\" name=\""+item['id']+"\" value=\""+item['stock_count']+"\"></td></tr>");
     });
   });
+
+  $.getJSON("http://10.140.124.121/iceberger_backend/api.php?callback=?", "method=getusers", function(data) {
+    // console.log(data);
+    $('#customerList').empty();
+    data.forEach(function(user) {
+      $('#customerList').append("<tr><td>"+user['name']+"</td><td>"+user['email']+"</td><td>"+(user['privilege'] == 0 ? "Customer" : "Staff")+"</td></tr>");
+    });
+  });
+
+
 
   $("#updateButton").click(function(event) {
     event.preventDefault;
