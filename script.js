@@ -20,7 +20,7 @@ $('document').ready(function() {
 
     var name = document.getElementById("logUname").value;
     var password = document.getElementById("logPsw").value;
-    $.getJSON("http://10.140.124.121/iceberger_backend/api.php?callback=?", "method=login&email=" + name + "&password=" + password, function(data) {
+    $.getJSON("http://iceberger.ey.nz/api.php?callback=?", "method=login&email=" + name + "&password=" + password, function(data) {
       if (data['success'] && data['privilege'] > 0) {
         $.cookie("user", data['user']);
         window.location.href = "index.html";
@@ -39,10 +39,10 @@ $('document').ready(function() {
     return false;
   });
 
-  $.getJSON("http://10.140.124.121/iceberger_backend/api.php?callback=?", "method=getinventory", function(data) {
+  $.getJSON("http://iceberger.ey.nz/api.php?callback=?", "method=getinventory", function(data) {
     // console.log(data);
     $('#inventory').empty();
-    data.forEach(function(category) {
+    data['inventory'].forEach(function(category) {
       // console.log(category);
       $('#inventory').append("<tr><th>"+category['description']+"</th><th></th></tr>");
       category['items'].forEach(function(item) {
@@ -53,7 +53,7 @@ $('document').ready(function() {
     });
   });
 
-  $.getJSON("http://10.140.124.121/iceberger_backend/api.php?callback=?", "method=getusers", function(data) {
+  $.getJSON("http://iceberger.ey.nz/api.php?callback=?", "method=getusers", function(data) {
     // console.log(data);
     $('#customerList').empty();
     data.forEach(function(user) {
@@ -76,7 +76,7 @@ $('document').ready(function() {
 
     console.log(JSON.stringify(json));
 
-    $.getJSON("http://10.140.124.121/iceberger_backend/api.php?callback=?", "method=updateinventory&stock=" + JSON.stringify(json), function(data) {
+    $.getJSON("http://iceberger.ey.nz/api.php?callback=?", "method=updateinventory&stock=" + JSON.stringify(json), function(data) {
       console.log(data);
     });
   });
