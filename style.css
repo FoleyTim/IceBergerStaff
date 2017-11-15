@@ -11,7 +11,7 @@ body {
   height: 100%;
   margin: 0;
   background-attachment: fixed;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 .container {
@@ -217,7 +217,7 @@ border: none;
 
 #StaffTable{
   float:right;
-  margin-right: 30%;
+  margin-right: 20%;
 }
 
 #createUser{
@@ -225,7 +225,7 @@ border: none;
   border: solid #FFD66C;
   width: 200px;
   border-width:medium;
-  margin-left: 30%;
+  margin-left: 20%;
   padding: 25px;
   /*align:left;*/
 }
