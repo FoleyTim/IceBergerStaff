@@ -11,6 +11,7 @@ body {
   height: 100%;
   margin: 0;
   background-attachment: fixed;
+  overflow-x: hidden; 
 }
 
 .container {
@@ -143,11 +144,26 @@ section.main-content {
   max-height: inherit;
 }
 
+#msgDiv{
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
 #stockTable{
-    width: 30%;
+  display: inline-block;
+  width: auto;
+}
+#StockList{
+  text-align: center;
+}
+
+#Customers {
+  text-align: center;
 }
 #CustomerTable{
-    width: 45%;
+  display: inline-block;
+  width: auto;
 }
 
 
@@ -201,7 +217,7 @@ border: none;
 
 #StaffTable{
   float:right;
-  margin-right: 270px;
+  margin-right: 30%;
 }
 
 #createUser{
@@ -209,7 +225,7 @@ border: none;
   border: solid #FFD66C;
   width: 200px;
   border-width:medium;
-  margin-left: 270px;
+  margin-left: 30%;
   padding: 25px;
   /*align:left;*/
 }

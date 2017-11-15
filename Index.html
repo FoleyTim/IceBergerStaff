@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <title>IceBerger | Staff</title>
   <link rel="stylesheet" href="style.css">
+  <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA17D/AGnS6QDBgv8AHanHAOLE/wC+ff8AIr7fAMyZ/wDt2/8Awoj8AMmU/wDx4/8A69b/AAAAAAAAAAAAAAAAAAAAAAAAAABEREAAAAAARHd3dEAAAAR3d3IiJAAAR3dyIiIiQABHdyIiIiJABHdyJEQmIiQEdyJAAGMyZAR3IkAAO2KzBHIiQAA7GxMEciIkQ7ER2ABCIjIjsRkwAEIjYyMRGYAABCOxERzIAAAARhXcyIAAAAAAOqiAAAD//wAA/B8AAPAHAADgAwAAwAEAAMABAACAAAAAgcAAAIHAAACBwAAAgAAAAMABAADAAQAA4AMAAPAHAAD8HwAA"
+    rel="icon" type="image/x-icon" />
   <script  src="https://code.jquery.com/jquery-3.2.1.min.js"  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="  crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
@@ -35,12 +37,11 @@
     </header>
   </section>
   <div class="">
-    <img class="whitechoc" src="images/whitechoc.png" alt="" width="101%">
+    <img class="whitechoc" src="images/whitechoc.png" alt="" width="100.2%">
   </div>
   <section>
     <!--STOCK TAB-->
     <div id="StockList" class="tabcontent">
-
       <table id ="stockTable">
         <thead>
           <tr class ="TableHead">
@@ -100,7 +101,6 @@
         <tr class="TableHead">
           <td>CUSTOMER NAME</td>
           <td>E-MAIL</td>
-          <td>Type</td>
         </tr>
         </thead>
         <tbody id="customerList">
@@ -153,7 +153,7 @@
           <td>REMOVE</td>
         </tr>
         </thead>
-        <tbody id="customerList">
+        <tbody id="staffList">
           <tr>
             <td>JmcD@gmail.com</td>
             <td><button>Remove</button></td>
@@ -169,22 +169,26 @@
         </tbody>
       </table>
       <!--CREATE NEW STAFF-->
-      <form  id="createUser" method="post">
+      <div  id="createUser">
         <div id ="createBlurb">
           Create a new staff account
         </div>
         <div class="createForm" >
           <label class="createUserLabel"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" class="notTrans" id="NewUname" required>
+          <input type="text" placeholder="Enter Username" name="uname" class="notTrans" id="signUname" required>
+        </div>
+        <div class="createForm" >
+          <label class="createUserLabel"><b>Email</b></label>
+          <input type="email" placeholder="Enter Email" name="email" class="notTrans" id="signEmail" required>
         </div>
         <div class="createForm">
           <label class="createUserLabel"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" class="notTrans" id="NewlogPsw" required>
+          <input type="password" placeholder="Enter Password" name="psw" class="notTrans" id="signPsw" required>
         </div>
         <div>
-            <button  type="submit" id=createStaffButton >CreateUser</button>
+            <button  type="submit" id="createStaffButton" >CreateUser</button>
         </div>
-      </form>
+      </div>
     </div>
   </section>
 
